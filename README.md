@@ -4,27 +4,21 @@
 
 You need to have Deno v1.28.0 or later intalled to run this repo.
 
-Start a dev server:
-
-```
-$ deno task dev
-```
-
-## Deploy
-
-Build production assets:
-
-```
-$ deno task build
+```sh
+deno --version
+# deno 1.28.3 (release, x86_64-unknown-linux-gnu)
+# v8 10.9.194.5
+# typescript 4.8.3
 ```
 
-## Notes
+Run frontend:
 
-- You need to use `.mjs` or `.mts` extension for the `vite.config.[ext]` file.
+```sh
+deno task dev
+```
 
-## Papercuts
+Run API
 
-Currently there's a "papercut" for Deno users:
-
-- peer dependencies need to be referenced in `vite.config.js` - in this example
-  it is `react` and `react-dom` packages that need to be referenced
+```sh
+deno run --allow-env --allow-net api/main.ts
+```
